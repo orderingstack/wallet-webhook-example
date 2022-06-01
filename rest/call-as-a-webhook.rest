@@ -1,0 +1,184 @@
+### send Order Completed 
+POST http://localhost:7072/api/process-order-to-wallet?ratio=0.15
+Accept: application/json
+Content-Type: application/json
+x-signature: 7836d2aec6361cfe78ef7acd2e0f6433a84261ecf68bcede42f78ae577718f69
+
+{
+    "commandClass":"OrderCompletedEventCommand",
+    "command": {
+        "status": "COMPLETED"
+    },
+    "tenant": {
+        "__NAME__": "test",
+                "backgroundImage" : "https://3e-ordering.s3.eu-west-1.amazonaws.com/RajskieJadlo/logo%20Rajskie%20Jad%C5%82o%20Black%20Strona%20Startowa.jpg",
+        "logo" : "false",
+        "defaultLanguage" : "pl",
+        "currency" : "PLN"
+    },
+    "order": {
+    "id" : "a62ab7db-22d9-45c3-b190-e917e34ff195",
+    "tenant1" : "1724ef16-20c8-4008-b183-3504cedc38af",
+    "tenant": "8724ef16-20c8-4008-b183-3504cedc38af",
+    "closedDate" : "2019-08-27T10:47:43",
+    "lastChanged" : "2019-08-27T10:47:43",
+    "isClosed" : true,
+    "isCompleted" : true,
+    "source" : "central",
+    "users" : [ 
+        {
+            "userId" : "7c7a8a7f-6f38-4414-a6eb-cb85b3bf82d2",
+            "roles" : [ 
+                "CUSTOMER", 
+                "CREATOR"
+            ],
+            "phone": "48607288412",
+            "email":"lukasz.kolczynski1@gmail.com",
+            "extra" : {}
+        }
+    ],
+    "orderType" : "DINE_IN",
+    "total" : "13.99",
+    "editTotal" : "13.99",
+    "status" : "COMPLETED",
+    "statusInfo" : "completed",
+    "claimCode" : "YQ0W5O",
+    "buckets" : [ 
+        {
+            "venue" : "2de9a0c3-4b21-407c-83d1-031ea0735eb3",
+            "sync" : false,
+            "name" : "PH 1b",
+            "lines" : [ 
+                {
+                    "id" : "36ca0d9e-8589-42e9-bee3-4f6c49efe95f",
+                    "creator" : "2de9a0c3-4b21-407c-83d1-031ea0735eb2",
+                    "created" : "2019-08-26T10:47:15",
+                    "updated" : "2019-08-26T10:47:22",
+                    "source" : "central",
+                    "productName" : "Burger",
+                    "quantity" : 5,
+                    "price" : "12.97",
+                    "productId" : "lj_burger",
+                    "product" : {
+                        "id" : "lj_burger",
+                        "kind" : "product",
+                        "quantity" : 1,
+                        "price" : "13.99",
+                        "literals":{
+                        "name" : "Burger"
+                        },
+                        "img" : "https://3e-ordering.s3-eu-west-1.amazonaws.com/media/lj/024.jpg",
+                        "extra" : {
+                            "KDS_category" : "grill",
+                            "PART" : "main"
+                        }
+                    },
+                    "productConfig" : {},
+                    "status" : "NEW",
+                    "discounts" : [],
+                    "extra" : {}
+                },
+                {
+                    "id" : "36ca0d9e-8589-42e9-bee3-4f6c49efe95a",
+                    "creator" : "2de9a0c3-4b21-407c-83d1-031ea0735eb2",
+                    "created" : "2019-08-26T10:47:15",
+                    "updated" : "2019-08-26T10:47:22",
+                    "source" : "central",
+                    "productName" : "Burger",
+                    "quantity" : 2,
+                    "price" : "7.97",
+                    "productId" : "lj_burger",
+                    "product" : {
+                        "id" : "lj_burger",
+                        "kind" : "product",
+                        "quantity" : 1,
+                        "price" : "13.99",
+                        "literals":{
+                        "name" : "Burger"
+                        },
+                        "img" : "https://3e-ordering.s3-eu-west-1.amazonaws.com/media/lj/024.jpg",
+                        "extra" : {
+                            "KDS_category" : "grill",
+                            "PART" : "main"
+                        }
+                    },
+                    "productConfig" : {},
+                    "status" : "NEW",
+                    "discounts" : [],
+                    "extra" : {}
+                },
+                {
+                    "id" : "36ca0d9e-8589-42e9-bee3-4f6c49efe951",
+                    "creator" : "2de9a0c3-4b21-407c-83d1-031ea0735eb2",
+                    "created" : "2019-08-26T10:47:15",
+                    "updated" : "2019-08-26T10:47:22",
+                    "source" : "central",
+                    "productName" : "Burger",
+                    "quantity" : 3,
+                    "price" : "3.00",
+                    "productId" : "lj_burger",
+                    "product" : {
+                        "id" : "lj_burger",
+                        "kind" : "product",
+                        "quantity" : 1,
+                        "price" : "3.0",
+                        "literals":{
+                        "name" : "Burger"
+                        },
+                        "img" : "https://3e-ordering.s3-eu-west-1.amazonaws.com/media/lj/024.jpg",
+                        "extra" : {
+                            "KDS_category" : "grill",
+                            "PART" : "side"
+                        }
+                    },
+                    "productConfig" : {},
+                    "status" : "CONFIRMED",
+                    "discounts" : [],
+                    "extra" : {}
+                },
+                {
+                    "id" : "36ca0d9e-8589-42e9-bee3-4f6c49efe952",
+                    "creator" : "2de9a0c3-4b21-407c-83d1-031ea0735eb2",
+                    "created" : "2019-08-26T10:47:15",
+                    "updated" : "2019-08-26T10:47:22",
+                    "source" : "central",
+                    "productName" : "Burger",
+                    "quantity" : 4,
+                    "price" : "4.37",
+                    "productId" : "lj_burger",
+                    "product" : {
+                        "id" : "lj_burger",
+                        "kind" : "product",
+                        "quantity" : 1,
+                        "price" : "4.00",
+                        "literals":{
+                        "name" : "Burger"
+                        },
+                        "img" : "https://3e-ordering.s3-eu-west-1.amazonaws.com/media/lj/024.jpg",
+                        "extra" : {
+                            "KDS_category" : "grill",
+                            "PART" : "drink"
+                        }
+                    },
+                    "productConfig" : {},
+                    "status" : "CONFIRMED",
+                    "discounts" : [],
+                    "extra" : {}
+                }
+            ],
+            "queuePos" : 3,
+            "extra" : {}
+        }
+    ],
+    "payments" : [ 
+        {
+            "id" : "100e0b17-bb15-4a3d-aa29-68da05c49677",
+            "source" : "WEB",
+            "amount" : "13.99",
+            "timestamp" : "2019-08-26T10:47:22",
+            "extra" : {}
+        }
+    ],
+    "extra" : {}
+  }
+}
