@@ -1,5 +1,7 @@
 # wallet-webhook-example
-Working with Azure functions.
+This is sample Ordering Stack webhook which process order, calculates points from order and adds points to users wallet. 
+
+It works with Azure Functions but can be simply adapted to any other serverless function provider or run as standalone service.
 
 ## devleopment
 for using nodemon to restart local version when changing 
