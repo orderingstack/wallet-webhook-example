@@ -32,8 +32,8 @@ x-signature: 7836d2aec6361cfe78ef7acd2e0f6433a84261ecf68bcede42f78ae577718f69
                 "CUSTOMER", 
                 "CREATOR"
             ],
-            "phone": "48607288412",
-            "email":"lukasz.kolczynski1@gmail.com",
+            "phone": "46123456789",
+            "email":"example@domain.com",
             "extra" : {}
         }
     ],
