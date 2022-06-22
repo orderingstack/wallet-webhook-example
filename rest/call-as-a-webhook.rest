@@ -182,3 +182,14 @@ x-signature: 7836d2aec6361cfe78ef7acd2e0f6433a84261ecf68bcede42f78ae577718f69
     "extra" : {}
   }
 }
+
+
+### send register new user 
+POST http://localhost:7071/api/register-new-user?points=45
+Accept: application/json
+Content-Type: application/json
+x-signature: eafee810968a1b270b9078b9509932c6c03e10ee0e6901f6c5156ed5979b57da
+
+{
+    "id":"7c7a8a7f-6f38-4414-a6eb-cb85b3bf82d2"
+}

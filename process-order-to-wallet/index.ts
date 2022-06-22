@@ -1,16 +1,16 @@
 require("source-map-support").install();
 import { AzureFunction, Context, HttpRequest } from "@azure/functions";
 import dayjs = require("dayjs");
-import { getToken } from "./auth";
-import { calculatePointsFromOrder } from "./orderTools";
-import { isSignatureCorrect } from "./signatureVerify";
-import { addPointsToUsersWallet, getWalletDetails } from "./walletTools";
+import { getToken } from "../common/auth";
+import { calculatePointsFromOrder } from "../common/orderTools";
+import { isSignatureCorrect } from "../common/signatureVerify";
+import { addPointsToUsersWallet, getWalletDetails } from "../common/walletTools";
 
-const httpTrigger: AzureFunction = async function (
+const httpTriggerProcessOrder: AzureFunction = async function (
   context: Context,
   req: HttpRequest
 ): Promise<void> {
-  context.log("HTTP trigger function processed a request.");
+  context.log("Request: process order");
   const webhookSecurityToken = process.env.SECURITY_TOKEN;
   if (!isSignatureCorrect(req, webhookSecurityToken)) {
     console.error("wrong signature");
@@ -56,4 +56,4 @@ const httpTrigger: AzureFunction = async function (
   }
 };
 
-export default httpTrigger;
+export default httpTriggerProcessOrder;

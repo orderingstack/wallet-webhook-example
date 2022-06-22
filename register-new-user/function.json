@@ -16,5 +16,5 @@
       "name": "res"
     }
   ],
-  "scriptFile": "../dist/process-order-to-wallet/index.js"
+  "scriptFile": "../dist/register-new-user/index.js"
 }
