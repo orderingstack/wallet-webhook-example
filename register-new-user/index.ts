@@ -5,11 +5,13 @@ import { calculatePointsFromOrder } from "../common/orderTools";
 import { isSignatureCorrect } from "../common/signatureVerify";
 import {
   addPointsToUsersWallet,
+  createWallet,
   getWalletDetails,
 } from "../common/walletTools";
 
 const httpTriggerRegisterNewUser: AzureFunction = async function (
   context: Context,
+
   req: HttpRequest
 ): Promise<void> {
   context.log("Reqest: register-new-user");
@@ -26,8 +28,9 @@ const httpTriggerRegisterNewUser: AzureFunction = async function (
     const walletId = req.body.id;
     const points: number = parseInt(req.query.points) || 30;
     context.log.info(`(register-new-user) add ${points} to wallet: ${walletId}`);
-    const accessToken = await getToken();
-    const currentWallet = await getWalletDetails(walletId, accessToken);
+    const accessToken = await getToken();    
+    //const currentWallet = await getWalletDetails(walletId, accessToken);
+    await createWallet(process.env.TENANT, walletId, accessToken);
     const pointsExpireDate: Date = dayjs().add(365, "day").toDate();
     const result = await addPointsToUsersWallet(
       points,
