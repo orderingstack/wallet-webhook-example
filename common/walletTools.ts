@@ -48,6 +48,7 @@ export async function createWallet(
       'Content-Type': 'application/json',
       Authorization: `Bearer ${accessToken}`,
     },
+    data: {}
   };
   const result = await axios(request);
   return result;
